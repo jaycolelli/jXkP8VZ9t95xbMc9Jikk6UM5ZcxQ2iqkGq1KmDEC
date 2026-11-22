@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+  <title>ABC Sand &amp; Rock · Yard Visualizer</title>
+  <meta name="description" content="See ABC Sand &amp; Rock decorative stone, DG and river rock in your own yard, and estimate the tons you need. A preview prepared for ABC Sand &amp; Rock by JayCo, AI Consulting &amp; Services. Available until December 2, 2026.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="author" content="JayCo, AI Consulting &amp; Services">
+  <meta name="theme-color" content="#0B1018">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ABC Sand &amp; Rock · Yard Visualizer">
+  <meta property="og:description" content="Snap your yard, pick a real ABC rock, see it in place and get your tonnage. A preview prepared for ABC Sand &amp; Rock by JayCo, AI Consulting &amp; Services.">
+  <meta property="og:image" content="https://jaycolelli.github.io/jXkP8VZ9t95xbMc9Jikk6UM5ZcxQ2iqkGq1KmDEC/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://jaycolelli.github.io/jXkP8VZ9t95xbMc9Jikk6UM5ZcxQ2iqkGq1KmDEC/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ABC Sand &amp; Rock · Yard Visualizer">
+  <meta name="twitter:description" content="Snap your yard, pick a real ABC rock, see it in place and get your tonnage. A preview by JayCo, AI Consulting &amp; Services.">
+  <meta name="twitter:image" content="https://jaycolelli.github.io/jXkP8VZ9t95xbMc9Jikk6UM5ZcxQ2iqkGq1KmDEC/og.jpg">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jaycolelli.github.io/jXkP8VZ9t95xbMc9Jikk6UM5ZcxQ2iqkGq1KmDEC/">
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+<div id="app">
+  <div id="ribbon" role="note">
+    <p><span id="ribbon-text">A preview prepared for ABC Sand &amp; Rock by JayCo, AI Consulting &amp; Services · available until Dec 2</span><span id="ribbon-days"></span></p>
+    <button type="button" id="ribbon-x" aria-label="Dismiss preview notice">×</button>
+  </div>
+
+  <header id="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 24 L11 11 L16 17 L20 9 L28 24 Z" fill="#C8642B"/><path d="M4 24 L28 24" stroke="#E9D8B8" stroke-width="2"/></svg></div>
+      <div class="brand-text"><div class="brand-name">ABC Sand &amp; Rock</div><div class="brand-sub">Yard Visualizer</div></div>
+    </div>
+    <div class="top-actions">
+      <button type="button" class="btn ghost sm" id="btn-new" title="Start over with a new photo"><svg viewBox="0 0 24 24"><path d="M4 7h3l2-3h6l2 3h3v12H4z M12 10a4 4 0 1 0 0 8a4 4 0 0 0 0-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>New photo</span></button>
+      <button type="button" class="btn copper sm" id="btn-save" disabled><svg viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Save image</span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="stage-wrap" aria-label="Photo editor">
+      <div id="stage">
+        <div id="stage-inner">
+          <canvas id="cv-orig"></canvas>
+          <canvas id="cv-gl"></canvas>
+          <svg id="overlay" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+        <div id="compare" hidden>
+          <div class="cmp-line"><div class="cmp-knob" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l-5 6l5 6M15 6l5 6l-5 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <span class="cmp-tag left">Before</span><span class="cmp-tag right">After</span>
+        </div>
+        <div id="hint" hidden></div>
+
+        <div id="welcome">
+          <div class="welcome-card">
+            <div class="kicker">ABC Sand &amp; Rock · Phoenix since 1974</div>
+            <h1>See the rock<br><em>before</em> it's delivered.</h1>
+            <p class="lede">Snap your yard, outline the area, pick a real ABC stone, and see it in place, with the tons you'll need.</p>
+            <div class="welcome-actions">
+              <label class="btn copper lg" for="file-cam"><svg viewBox="0 0 24 24"><path d="M4 7h3l2-3h6l2 3h3v12H4z M12 10a4 4 0 1 0 0 8a4 4 0 0 0 0-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Take a photo</label>
+              <label class="btn sand lg" for="file-up"><svg viewBox="0 0 24 24"><path d="M4 16v3h16v-3M12 4v11m0-11L7.5 8.5M12 4l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Upload a photo</label>
+            </div>
+            <div class="or">or try one of ABC's own yard photos</div>
+            <div class="samples" id="samples"></div>
+          </div>
+        </div>
+        <input type="file" id="file-cam" accept="image/*" capture="environment" hidden>
+        <input type="file" id="file-up" accept="image/*" hidden>
+      </div>
+      <div id="stage-tools">
+          <button type="button" class="chip-btn" id="btn-compare" disabled><svg viewBox="0 0 24 24"><path d="M12 3v18M5 7h4v10H5zM15 7h4v10h-4z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>Before / After</span></button>
+          <button type="button" class="chip-btn" id="btn-fit" title="Reset zoom"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+        </div>
+    </section>
+
+    <section id="panel" aria-label="Controls">
+      <nav id="steps" role="tablist"></nav>
+      <div id="panel-body"></div>
+    </section>
+  </main>
+
+  <button type="button" id="chat-fab" aria-label="Open the ABC help chat"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><circle cx="9" cy="10.5" r="1.1" fill="currentColor"/><circle cx="12" cy="10.5" r="1.1" fill="currentColor"/><circle cx="15" cy="10.5" r="1.1" fill="currentColor"/></svg><span>Help · Ayuda</span></button>
+  <div id="chat" hidden></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+</div>
+<div id="endcard" hidden></div>
+<noscript><p style="font-family:Georgia,serif;color:#FBF5EA;padding:32px;text-align:center">This preview needs JavaScript. It remains open until December 2, 2026.</p></noscript>
+<script>
+  /* =============================================================================
+   * JAY_CONTACT — public contact line shown on the closed end card.
+   * Set this to an email, a phone number, or a URL. Leave it as "" to hide
+   * the contact line. Whatever you put here is public on this site.
+   * ============================================================================= */
+  window.JAY_CONTACT = "";
+</script>
+<script src="data.js?v=1"></script>
+<script src="app.js?v=1"></script>
+<script src="chat.js?v=1"></script>
+</body>
+</html>
