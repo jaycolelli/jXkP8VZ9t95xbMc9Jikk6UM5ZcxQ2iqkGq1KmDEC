@@ -257,3 +257,6 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;bac
 #endcard .s{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
 #endcard a{color:var(--gold)}
 .ch-log>*{flex-shrink:0}
+
+.sister{font-size:12px;color:var(--muted);margin:14px 0 2px;line-height:1.6}
+.sister a{color:var(--gold);font-weight:650;text-decoration:none;border-bottom:1px solid rgba(212,175,95,.4)}
